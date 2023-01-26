@@ -1,0 +1,16 @@
+행에 접근한다는 말의 의미
+USERVO DAO의 의미
+
+아이디 중복검사에서
+boolean result = false 가 들어가는 이유
+
+
+모델객체?
+resultSet = 행?
+public 사용 이유
+boolean check 이유 (UserDAO 123줄)
+userVO 클래스 tostring, getter,setter
+queryForJoin?
+boardVO?(BoardDAO)
+DTO?
+VO?

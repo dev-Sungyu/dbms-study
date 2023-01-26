@@ -283,11 +283,36 @@ FROM TEAM T JOIN PLAYER P
 ON T.TEAM_ID = P.TEAM_ID AND PLAYER_NAME = '송종국'; 
 
 /*JOBS 테이블에서 JOB_ID로 직원들의 JOB_TITLE, EMAIL, 성, 이름 검색*/
+SELECT JOB_TITLE, EMAIL, FIRST_NAME, LAST_NAME
+FROM JOBS S JOIN EMPLOYEES E
+ON S.JOB_ID = E.JOB_ID;
+
 /*EMP 테이블의 SAL을 SALGRADE 테이블의 등급으로 나누기*/
+SELECT *
+FROM EMP E JOIN SALGRADE S
+ON E.
+-- EMP테이블과 SALGRADE 테이블의 교집합이 없는데 어떻게 JOIN 하라는건지 모르겠음
+
 /*EMPLOYEES 테이블에서 HIREDATE가 2003~2005년까지인 사원의 정보와 부서명 검색*/
+SELECT *  FROM EMPLOYEES
+WHERE '2003' BETWEEN '2005';
+
 /*JOB_TITLE 중 'Manager'라는 문자열이 포함된 직업들의 평균 연봉을 JOB_TITLE별로 검색*/
+SELECT AVG(SALARY), JOB_TITLE 
+FROM EMPLOYEES E JOIN JOBS J
+ON E.JOB_ID = J.JOB_ID
+WHERE JOB_TITLE = '%Manager%'
+GROUP BY JOB_TITLE
+HAVING AVG(SALARY);
+
 /*EMP 테이블에서 ENAME에 L이 있는 사원들의 DNAME과 LOC 검색*/
+SELECT DNAME, LOC, ENAME
+FROM DEPT D JOIN EMP E
+ON D.DEPTNO = E.DEPTNO AND ENAME = '%L%';
+
 /*축구 선수들 중에서 각 팀별로 키가 가장 큰 선수들 전체 정보 검색*/
+
+
 /*EMP 테이블에서 사원의 이름과 매니저 이름을 검색*/
 
 
